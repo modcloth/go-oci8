@@ -178,7 +178,7 @@ func (d *OCI8Driver) Open(dsnString string) (connection driver.Conn, err error) 
 	}
 
 	rv := C.OCIInitialize(
-		C.OCI_DEFAULT|C.OCI_THREADED,
+		C.OCI_THREADED|C.OCI_DEFAULT,
 		nil,
 		nil,
 		nil,
